@@ -1,0 +1,23 @@
+{
+  "name": "lamdaGroups",
+  "version": "1.0.0",
+  "description": "This repositery is used to demonstrate how AWS lamda works.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LogansRuin/lamdaGroups.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LogansRuin/lamdaGroups/issues"
+  },
+  "homepage": "https://github.com/LogansRuin/lamdaGroups#readme",
+  "dependencies": {
+    "node": "^12.6.0"
+  }
+}
