@@ -4,16 +4,14 @@ const groupStudents = (groupNames, students) => {
     let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
     [students[i], students[j]] = [students[j], students[i]]; // swap elements
   }
-  console.log('Shuffled students: ', students, '\n')
 
   //Check how many groups there are
   const numOfGroups = groupNames.length
-  console.log('Number of groups: ',numOfGroups, '\n')
+
   
   // how many in each group?
   const numInBase = Math.floor(students.length / numOfGroups)
   const extras = students.length % numOfGroups || 'none'
-  console.log(`Base number in each group: ${numInBase} with ${extras} left over`,'\n')
 
   // Allocate everyone to a group
   const allocate = () => {
@@ -23,17 +21,16 @@ const groupStudents = (groupNames, students) => {
     }
     return group
   }
+  
+  const groups = {}
 
   groupNames.map(group => {
     if(extras === 'none'){
-      console.log( {
-        name: group,
-        students: allocate()
-      })
+      groups[group] = allocate()
     }
   })
 
-console.log(groupNames)
+  console.log(groups)
 }
 
 const students = ['andre', 'anisha', 'ash', 'celia', 'davidb', 'davidn', 'keith', 'jennie', 'joanna', 'jared', 'raaya', 'rahul', 'ruslan', 'taine', 'tamari', 'noel']
